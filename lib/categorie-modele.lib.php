@@ -38,7 +38,7 @@ function changer($categorie) {
   $nom = mysqli_real_escape_string($bd, $categorie['nom']);
   $parent = (int)$categorie['parent']; 
   $sql = "UPDATE categorie SET nom='$nom', id_parent=$parent WHERE id=$id";
-  return creer($bd, $sql);
+  return modifier($bd, $sql);
 }
 
 /**
